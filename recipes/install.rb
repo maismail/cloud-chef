@@ -33,7 +33,7 @@ template "#{node['cloud']['init']['install_dir']}/ec2init/ec2init_config.ini" do
 end
 
 cached_file = "ec2init-#{node['cloud']['init']['version']}-py3-none-any.whl"
-source = "#{node['install']['enterprise']['download_url']}/ec2init/#{node['cloud']['init']['version']}/#{cached_file}"
+source = "#{node['install']['enterprise']['download_url']}/dev/ec2init/#{node['cloud']['init']['version']}/#{cached_file}"
 remote_file "#{Chef::Config['file_cache_path']}/#{cached_file}" do
   user 'root'
   group 'root'
